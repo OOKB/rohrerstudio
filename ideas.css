@@ -182,3 +182,83 @@ footer a {
 .columns.half {
   width: 50%;
 }
+
+/*** detail view ***/
+
+#detail-view {
+  position: fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(128,128,128,.95);
+  overflow: auto;
+  padding: 30px;
+  z-index: 100;
+}
+
+#detail-view .close {
+  position: fixed;
+  top:10px;
+  right:10px;
+}
+
+#detail-view ul.images {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+#detail-view ul.images li,
+#detail-view ul.images li img {
+  width: 100%;
+}
+
+#detail-view .detail-info {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  color: white;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+#detail-view .detail-info h1 {
+  float: left;
+  width: 25%;
+  padding: 0 15px;
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+#detail-view .detail-info p {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+  margin: 4px 0 0 0;
+  line-height: 24px;
+}
+
+#detail-view .detail-info ul.miscellany {
+  line-height: 24px;
+  list-style: none;
+  margin: 4px 0 0 0;
+  float: left;
+  width: 25%;
+  padding: 0 15px;
+}
+
+#detail-view .detail-info ul.miscellany li {
+  border-bottom: 1px solid darkred;
+  font-size: 12px;
+}
+
+#detail-view .detail-info ul.miscellany li:first-child {
+  border-top: 1px solid darkred;
+}
