@@ -7,7 +7,7 @@ http://candhrestoration.com/
 
 Both of these are using a sort of "1 page" formula where clicking a link scrolls you up and down the page to get you to the information you want — we could just as easily do multiple pages.
 
-The main thing you'd probably be updating is are the projects. We've come up with some ideas for updating those where folders of images for each project are shared on dropbox, or on flickr, or other similar file/image hosting or transfer services and then our server is able to grab them, process them, and make them available at different sizes when and where necessary.
+The main thing you'd probably be updating are the projects. We've come up with some ideas for updating those where folders of images for each project are shared on dropbox, or on flickr, or other similar file/image hosting or transfer services and then our server is able to grab them, process them, and make them available at different sizes when and where necessary.
 
 Text content for the projects we've been handling as separate documents which are easy to edit, update and add via an online code tool 
 
