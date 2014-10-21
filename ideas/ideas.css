@@ -16,6 +16,8 @@
 
 * { box-sizing: border-box; }
 
+.clear { clear:both; display: block; }
+
 html {
   margin: 0;
   padding: 0;
@@ -261,4 +263,21 @@ footer a {
 
 #detail-view .detail-info ul.miscellany li:first-child {
   border-top: 1px solid darkred;
+}
+
+#detail-view ul.projects-nav {
+  list-style: none;
+  margin: 40px 0 0 0;
+  border-top: 1px solid darkred;
+  padding: 20px 0 0 0;
+  text-align: center;
+  width: 100%;
+}
+#detail-view ul.projects-nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+#detail-view ul.projects-nav li button {
+  width: 150px;
 }
