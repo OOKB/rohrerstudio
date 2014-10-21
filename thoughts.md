@@ -28,10 +28,7 @@ The other pages/sections can be their own simple pages, or just sections of the 
 
 The $2000 would include my seeding the site with the projects you want to start with, provided you can get me the images (it doesn't seem like the current site has very large images), migrating most of the old content from the existing site, and helping whomever will be upkeeping the site moving forward get a handle on the few things required for adding/editing content (mostly the projects, awards, and publications I'm guessing?).
 
-This would be built using a portfolio tool that a colleague and I are developing, so as we make improvements to the system your site will hopefully benefit as well… 
+This would be built using a portfolio tool that a colleague and I are developing, so as we make improvements to the system your site will benefit as well. Using this tool makes it easy for us to make the site work quickly and smoothly, as well as to fix issues when/if they occur. The cost for our portfolio tool is $25.00/mo or would be $250.00/yr if you pay for the whole year up front. This includes hosting and related fees. We use a global server network of the type used by Facebook, google, twitter, etc.
 
-It is easiest for us to make the site work quickly and smoothly, as well as to fix issues when/if they occur if we host the site on our infrastructure (a global server network of the type used by Facebook, google, amazon, twitter, etc.). The cost of hosting is $25.00/mo or would be $250.00/yr if you pay for the whole year up front.
-
- 
 
 
