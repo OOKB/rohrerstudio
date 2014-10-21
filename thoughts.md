@@ -2,7 +2,7 @@ Sorry I haven't gotten back to you sooner.
 
 The lowest floor I can build a site for that I'd be proud of, you'd be glad to show people, and that would allow for good dynamic features, broad coverage of devices, and semi-easy updating is $2000. For that price my colleague and I can put something like the following together:
 
-http://graduate.mica.edu/gradshow/2014/
+http://graduate.mica.edu/gradshow/2014/  
 http://candhrestoration.com/
 
 Both of these are using a sort of "1 page" formula where clicking a link scrolls you up and down the page to get you to the information you want — we could just as easily do multiple pages.
@@ -13,7 +13,7 @@ Text content for the projects we've been handling as separate documents which ar
 
 In looking at a lot of other architecture sites, the main focus is always on images. I think we could treat the homepage as the project page — which would remove needing to figure out what to put on the homepage or needing some sort of landing gimmick, but keep the focus on images.
 
-Based on that, here is what I am thinking.
+Based on that, here is what I am thinking.  
 http://rohrerdemo.ookb.co/
 
 Each project would get a "slice" on the homepage, the default sort would be newest on top, oldest on the bottom. This list of "slices" would then be sortable with some tools at the top of the page (like the MFA Thesis show example I sent http://graduate.mica.edu/gradshow/2014/ — or the "what we do" section here: http://www.rwdfoundation.org/whatwedo/ — or, like how the collection of textiles filters on this site: http://www.rogersandgoffigon.com/#collection/textile/48/p1 [click on "filters" and then select some things… the list dynamically removes/reorders things based on selections])
