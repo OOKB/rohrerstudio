@@ -16,19 +16,20 @@ In looking at a lot of other architecture sites, the main focus is always on ima
 Based on that, here is what I am thinking.  
 http://rohrerdemo.ookb.co/
 
-Each project would get a "slice" on the homepage, the default sort would be newest on top, oldest on the bottom. This list of "slices" would then be sortable with some tools at the top of the page (like the MFA Thesis show example I sent http://graduate.mica.edu/gradshow/2014/ — or the "what we do" section here: http://www.rwdfoundation.org/whatwedo/ — or, like how the collection of textiles filters on this site: http://www.rogersandgoffigon.com/#collection/textile/48/p1 [click on "filters" and then select some things… the list dynamically removes/reorders things based on selections])
+Each project would get a "slice" on the homepage, the default sort would be newest on top, oldest on the bottom. This list of "slices" would then be sortable with some tools at the top of the page (like the MFA Thesis show example — http://graduate.mica.edu/gradshow/2014/ — the links under "students" all dynamically sort what shows up in the students section; or the "what we do" section here: http://www.rwdfoundation.org/whatwedo/ — the categories on the left filter the main column dynamically; or, like how the collection of textiles filters on this site: http://www.rogersandgoffigon.com/#collection/textile/48/p1 [click on "filters" and then select some things… the list dynamically removes/reorders things based on selections])
 
-This would allow sorting/narrowing down of the "slices" by the categories you currently are using, or by date, or name, or location… whatever pieces of data you would want each project to have accessible to the filters.
+This would allow sorting/narrowing down of the "slices" by the categories you currently are using, or by date, or name, or location… or whatever pieces of data you would want each project to have available.
 
-Each slice would be clickable, and would link to a more broad project page with more detailed info and a slideshow of images when many images for a project exist. (maybe like this? http://rohrerdemo.ookb.co/project.html)
+Each slice would then be clickable, and would link to a more broad project page with more detailed info and either a big single image or a slideshow of images when many images for a project exist. (maybe like this? http://rohrerdemo.ookb.co/project.html) — also the MFA site (http://graduate.mica.edu/gradshow/2014/#id=479025), C&H site (http://candhrestoration.com/ click a house, then click an image thumbnail), and Deutsch site projects pages (http://www.rwdfoundation.org/whatwedo/projects/akimbo/) are somewhat like this.
 
-An alternate layout which still presents all the projects first could be something like this: http://rohrerdemo.ookb.co/alt.html
+If you don't like the slices idea, an alternate layout which still presents all the projects first could be something like this: http://rohrerdemo.ookb.co/alt.html
 
-The other pages/sections can be their own simple pages, or just sections of the home page or a second long scrolling page… I hadn't given those much thought yet as they require the least amount of the total effort to build.
+The other pages/sections can be their own simple pages, or just sections of the home page or a second long scrolling page… I haven't given those much thought yet as they require the least amount of the total effort to build.
 
-The $2000 would include my seeding the site with the projects you want to start with, provided you can get me the images (it doesn't seem like the current site has very large images), migrating most of the old content from the existing site, and helping whomever will be upkeeping the site moving forward get a handle on the few things required for adding/editing content (mostly the projects, awards, and publications I'm guessing?).
+The $2000 would include my seeding the site with the projects you want to start with, provided you can get me the images at good resolutions (it doesn't seem like the current site has very large images), migrating most of the old content from the existing site, and helping whomever will be upkeeping the site moving forward get a handle on the few things required for adding/editing content (mostly the projects, awards, and publications I'm guessing?).
 
-This would be built using a portfolio tool that a colleague and I are developing, so as we make improvements to the system your site will benefit as well. Using this tool makes it easy for us to make the site work quickly and smoothly, as well as to fix issues when/if they occur. The cost for our portfolio tool is $25.00/mo or would be $250.00/yr if you pay for the whole year up front. This includes hosting and related fees. We use a global server network of the type used by Facebook, google, twitter, etc.
+This would be built using a portfolio tool called "EZLE" that a colleague and I are developing, so as we make improvements to the EZLE system your site will benefit as well. Using EZLE makes it easy for us to make the site work quickly and smoothly, as well as to fix issues when/if they occur. The cost for EZLE is $25.00/mo or $250.00/yr if you pay for the whole year up front. This includes hosting and related fees (automatic image resizing from single high-resolution images, redundant backups, multiple server locations, etc.). We use a global server network of the type used by Facebook, google, twitter, etc. so things are safe, secure, and pretty darn fast.
+
 
 
 
