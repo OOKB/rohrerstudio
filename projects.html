@@ -7,51 +7,68 @@
 
     <title>Rohrer Studio</title>
 
-    <link rel="stylesheet" href="alt.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
 
-    <header>
-      <h1>Rohrer Studio</h1>
+    <header class="clearfix">
+      <h1><a href="index.html">Rohrer Studio</a></h1>
       <nav>
         <ul>
-          <li class="active"><a href="index.html">Projects</a></li>
-          <li><a href="other.html#about">About</a></li>
-          <li><a href="other.html#contact">Contact</a></li>
-          <li><a href="other.html#awards">Awards</a></li>
-          <li><a href="other.html#articles">Articles</a></li>
-          <li><a href="other.html#employment">Employment</a></li>
+          <li class="active"><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="awards.html">Awards</a></li>
+          <li><a href="articles.html">Articles</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <div>
-        <p>
-          some variety of sorting tools... <br/>
-          these would all dynamically, real time filter the visual list of projects below. <br/>
-          categories, maybe a search form? <br/>
-          probably some date sorting feature? <br/>
-          keeping the sort of categories on their current site...
-        </p>
-      </div>
+    <main class="clearfix">
+      <ul id="filters">
+        <li><button>Education</button></li>
+        <li><button>Government</button></li>
+        <li><button>Green</button></li>
+        <li><button>Historic</button></li>
+        <li><button>Industrial</button></li>
+        <li><button>Offices</button></li>
+        <li><button>Senior</button></li>
+        <li><button>Religious</button></li>
+        <li><button>Residential</button></li>
+        <li><button>Restaurant</button></li>
+        <li><button>Retail</button></li>
+      </ul>
       <ul id='projects'>
         <li class="project-preview">
+          <img src="https://unsplash.it/555/555?image=443" alt="some project or something"/>
+          <div class="info">
+            <h2>Project Title</h2>
+            <p>Some description?</p>
+          </div>
+        </li>
+        <li class="project-preview">
+          <img src="https://unsplash.it/555/555?image=448" alt="some project or something"/>
+          <div class="info">
+            <h2>Project Title</h2>
+            <p>Some description?</p>
+          </div>
+        </li>
+        <li class="project-preview featured">
           <img src="https://unsplash.it/555/555?image=22" alt="some project or something"/>
           <div class="info">
             <h2>Veritas Veni Vin Veci Velodrome</h2>
             <p>Pickled beard jean shorts you probably haven't heard of them locavore ethical.</p>
           </div>
         </li>
-        <li class="project-preview">
+        <li class="project-preview featured">
           <img src="https://unsplash.it/555/555?image=44" alt="some project or something"/>
           <div class="info">
             <h2>Project Title</h2>
             <p>Trust fund yr put a bird on it, vegan salvia 90's butcher umami hella gastropub..</p>
           </div>
         </li>
-        <li class="project-preview">
+        <li class="project-preview featured">
           <img src="https://unsplash.it/555/555?image=46" alt="some project or something"/>
           <div class="info">
             <h2>Project Title</h2>
@@ -331,27 +348,12 @@
             <p>Some description?</p>
           </div>
         </li>
-        <li class="project-preview">
-          <img src="https://unsplash.it/555/555?image=443" alt="some project or something"/>
-          <div class="info">
-            <h2>Project Title</h2>
-            <p>Some description?</p>
-          </div>
-        </li>
-        <li class="project-preview">
-          <img src="https://unsplash.it/555/555?image=448" alt="some project or something"/>
-          <div class="info">
-            <h2>Project Title</h2>
-            <p>Some description?</p>
-          </div>
-        </li>
         <div class="clear"></div>
       </ul>
     </main>
 
     <footer>
-      <p>©2014 Rohrer Studio</p>
-<!--       <p>a <a href="#">Labori.us</a> effort.</p> -->
+      <p>©2014 Rohrer Studio | Architecture • Interiors</p>
     </footer>
 
   </body>

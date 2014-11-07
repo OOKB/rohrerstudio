@@ -1,0 +1,262 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400');
+@import url('http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic');
+@import url('http://fonts.googleapis.com/css?family=PT+Mono');
+
+.opensans {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.gentium {
+  font-family: 'Gentium Book Basic', Georgia, serif;
+}
+
+.ptmono {
+  font-family: 'PT Mono', 'droid mono', menlo, monaco, monospace;
+}
+
+* { box-sizing: border-box; font-size: 1em; line-height: 1.5em; }
+
+.clear { clear: both; display: block; }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  color: gray;
+  background: rgba(250,248,248,1);
+}
+
+p {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+/******/
+
+header {
+  margin-bottom: 20px;
+}
+
+header h1,
+header h1 a {
+  color: rgba(205,32,39,1);
+  text-transform: lowercase;
+  font-weight: normal;
+  margin: 0;
+  float:left;
+}
+
+header h1 a {
+  font-size: 2em;
+  line-height: .6;
+  padding: 0;
+  display: block;
+  text-decoration: none;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  display: block;
+  padding: .2em .75em;
+  text-decoration: none;
+  color: gray;
+}
+
+header nav ul li a:hover {
+  color: black;
+}
+
+header nav ul li.active a {
+  border-bottom: 2px solid red;
+  box-sizing: border-box;
+}
+
+/******/
+
+/****
+  Refine these stlyes more — start with a simpler, single column, then grow.
+  Also, it should get even wider than just 6 columns at even larger screen sizes.
+*****/
+
+#projects {
+  list-style: none;
+  margin: 0 -2.5px;
+  padding: 0;
+  width: calc(100% + 5px);
+}
+
+#projects li.project-preview {
+  height: 200px;
+  position: relative;
+  padding: 0 2.5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  float: left;
+  width: 100%;
+}
+
+@media (min-width: 300px) {
+  #projects li.project-preview {
+    height: 200px;
+  }
+}
+
+@media (min-width: 350px) {
+  #projects li.project-preview {
+    height: 250px;
+  }
+}
+
+@media (min-width: 400px) {
+  #projects li.project-preview {
+    height: 300px;
+  }
+}
+
+@media (min-width: 440px) {
+  #projects li.project-preview {
+    width: calc(100% / 2);
+    height: 175px;
+  }
+}
+
+@media (min-width: 700px) {
+  #projects li.project-preview {
+    width: calc(100% / 3);
+  }
+}
+
+@media (min-width: 840px) {
+  #projects li.project-preview {
+    width: calc(100% / 4);
+  }
+}
+
+@media (min-width: 1040px) {
+  #projects li.project-preview {
+    width: calc(100% / 5);
+  }
+}
+
+@media (min-width: 1240px) {
+  #projects li.project-preview {
+    width: calc(100% / 6);
+  }
+}
+
+@media (min-width: 1480px) {
+  #projects li.project-preview {
+    width: calc(100% / 7);
+  }
+}
+
+@media (min-width: 1720px) {
+  #projects li.project-preview {
+    width: calc(100% / 8);
+  }
+}
+
+#projects li.project-preview img {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+li.project-preview .info {
+  color: gray;
+  position: absolute;
+  top:100%;
+  left:0;
+  right:0;
+  bottom:0;
+  padding: 5px 0;
+  background: rgba(250,248,248,1);
+  transition: all 300ms ease-out;
+  font-size: 75%;
+}
+
+li.project-preview:hover .info {
+  top: 50%;
+}
+
+.info h2 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(205,32,39,1);
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0;
+}
+
+.info p {
+  margin: 5px 0;
+  font-family: 'Gentium Book Basic', Georgia, serif;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: .9em;
+}
+
+footer a {
+  color: gray;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(205,32,39,.75);
+}
+
+.other section {
+  padding: 100px 0
+}
+
+.columns {
+  float:left;
+}
+
+.columns.half {
+  width: 50%;
+}
+
+#filters {
+  line-style: none;
+  margin: 0 0 20px 0;
+  padding: 10px 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+#filters li {
+  display: inline-block;
+}
