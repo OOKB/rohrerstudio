@@ -1,0 +1,153 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400');
+@import url('http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic');
+@import url('http://fonts.googleapis.com/css?family=PT+Mono');
+
+.opensans {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.gentium {
+  font-family: 'Gentium Book Basic', Georgia, serif;
+}
+
+.ptmono {
+  font-family: 'PT Mono', 'droid mono', menlo, monaco, monospace;
+}
+
+* { box-sizing: border-box; }
+
+.clear { clear:both; display: block; }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  width: 100%;
+  color: gray;
+  background: rgba(250,248,248,1);
+}
+
+p {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.giant {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 500%;
+  line-height: 1em;
+  text-align: center;
+}
+
+.giant h2 span {
+  font-size: .4em;
+}
+
+
+/******/
+
+header {
+  position: relative;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: rgba(205,32,39,1);
+  text-transform: lowercase;
+  font-size: 300%;
+  font-weight: normal;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+header h2 {
+  color: gray;
+  text-transform: lowercase;
+  font-size: 200%;
+  font-weight: normal;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/******/
+
+#grid {
+  list-style: none;
+  margin: 0 -20px;
+  padding: 0;
+  width: 100vw;
+}
+
+#grid li {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  float: left;
+  display: block;
+  border: 5px solid rgba(250,248,248,1);
+  background: rgba(100,100,100,.75);
+}
+
+#grid li.text-only {
+  background: rgba(205,32,39,1);
+  color: rgba(250,248,248,1);
+  padding: 10px;
+}
+
+@media (min-width: 500px) {
+  #grid li.quarter {
+    width: 25%;
+    height: 300px
+  }
+  #grid li.half {
+    width: 50%;
+    height: 300px
+  }
+  #grid li.tall {
+    height: 600px;
+  }
+
+}
+
+#grid li img {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#grid li .info {
+  color:rgba(211,211,211,.9);
+  padding: 10px;
+}
+
+.info h2 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(250,248,248,1);
+  text-decoration: none;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.info p {
+  font-family: 'Gentium Book Basic', Georgia, serif;
+}
+
