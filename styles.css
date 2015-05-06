@@ -264,3 +264,28 @@ footer a {
 #projects .category {
   display: none;
 }
+
+/* demo home slideshow */
+
+#homess {
+  text-align: center;
+  background: lightGray;
+  padding: 1em;
+  margin: 0 -20px;
+}
+
+.cycle-slideshow { width: 100%; max-width: 960px; margin: 0 auto; }
+.cycle-slideshow img { width: 100%; height: auto }
+
+.cycle-pager span {
+  font-size: 3em;
+  width: .5em;
+  height: .5em;
+  line-height: .5;
+  display: inline-block;
+  color: gray;
+}
+
+.cycle-pager span.cycle-pager-active {
+  color: rgba(205,32,39,1);
+}
