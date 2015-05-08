@@ -7,7 +7,7 @@
 
     <title>Rohrer Studio</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ideas.css">
     
     <style>
       body {
@@ -18,10 +18,36 @@
         overflow-y: scroll;
         overflow-x: hidden;
       }
+      .image-thread img {
+        width: 100%;
+        display: block;
+        margin: 2em 0;
+      }
+      
+      /* demo home slideshow */
+
       #homess {
+        text-align: center;
         background: transparent;
+        padding: 1em;
+        margin: 0 -20px;
       }
 
+      .cycle-slideshow { width: 100%; max-width: 960px; margin: 0 auto; }
+      .cycle-slideshow img { width: 100%; height: auto }
+
+      .cycle-pager span {
+        font-size: 3em;
+        width: .5em;
+        height: .5em;
+        line-height: .5;
+        display: inline-block;
+        color: white;
+      }
+
+      .cycle-pager span.cycle-pager-active {
+        color: rgba(205,32,39,1);
+      }
     </style>
     
   </head>
@@ -424,8 +450,6 @@
           <li>Kind of building? Kind of Project?</li>
           <li>Other Misc. project data</li>
           <li>Other Misc. project data</li>
-          <li>Videos or other sorts of links?</li>
-          <li>Videos or other sorts of links?</li>
         </ul>
 
         <br class="clear" />
