@@ -428,7 +428,7 @@ section.content p {
     display: none;
     list-style: none;
     margin: 0;
-    padding: 0 0 50px 0;
+    padding: 0 0 70px 0;
     border-top:1px solid red;
     position: absolute;
     bottom: 0;
@@ -456,14 +456,15 @@ section.content p {
 
   header nav button.toggle {
     background: white;
-    border: 1px solid darkred;
+    border: 1px solid red;
     border-radius: 2px;
-    box-shadow: 0 3px 3px rgba(0,0,0,.2);
+    box-shadow: 0 0 6px rgba(0,0,0,.2);
     display: block;
-    height: 40px;
+    height: 60px;
     margin: 5px;
     padding: 5px;
     width: 60px;
+    border-radius: 30px;
     /**/
     position: relative;
     z-index: 200;
@@ -473,8 +474,9 @@ section.content p {
     background: gray;
     border-radius: 3px;
     display: block;
-    height: 4px;
-    margin: 3px;
+    height: 3px;
+    margin: 6px auto;
+    width: 60%;
   }
 
   header nav button.toggle:active {
@@ -486,9 +488,11 @@ section.content p {
     background: white;
   }
   header nav button.toggle:focus {
-    outline-color: gray;
+    outline: none;
   }
-  
+  header nav ul li.active a {
+    border-bottom: none;
+  }
   /** fix single page demo styles **/
   #detail-view .detail-info {
     padding: 0;
