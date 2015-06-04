@@ -411,3 +411,107 @@ section.content p {
 
 /** start some responsive stuff? **/
 
+/** Hamburger menu stuff **/
+@media (max-width: 768px) {
+  header nav {
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right: 0;
+    right:0;
+    z-index: 100;
+    width: 100%;
+  }
+  
+  header nav ul {
+    background: white;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 50px 0;
+    border-top:1px solid red;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  header nav ul li {
+    border-bottom: 1px solid red;
+    display: list-item;
+    float: none;
+  }
+
+  header nav ul li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    transition: all 500ms;
+  }
+
+  header nav ul li a:hover {
+    background: gray;
+    text-decoration: none;
+    color: white;
+  }
+
+  header nav button.toggle {
+    background: white;
+    border: 1px solid darkred;
+    border-radius: 2px;
+    box-shadow: 0 3px 3px rgba(0,0,0,.2);
+    display: block;
+    height: 40px;
+    margin: 5px;
+    padding: 5px;
+    width: 60px;
+    /**/
+    position: relative;
+    z-index: 200;
+  }
+
+  header nav button.toggle span {
+    background: gray;
+    border-radius: 3px;
+    display: block;
+    height: 4px;
+    margin: 3px;
+  }
+
+  header nav button.toggle:active {
+    background: darkred;
+    box-shadow: inset 0 3px 3px rgba(0,0,0,.2);
+  }
+
+  header nav button.toggle:active span {
+    background: white;
+  }
+  header nav button.toggle:focus {
+    outline-color: gray;
+  }
+  
+  /** fix single page demo styles **/
+  #detail-view .detail-info {
+    padding: 0;
+  }
+  #detail-view .detail-info ul.miscellany,
+  #detail-view .detail-info section.content,
+  #detail-view .detail-info h1 {
+    float:none;
+    width: 100%;
+    padding: 0;
+  }
+  #detail-view .detail-info h1 {
+    margin-bottom: .5em;
+  }
+  #detail-view .detail-info figure figcaption {
+    position: static;
+    width: auto;
+    margin: -1.5em 0 .25em 0;
+  }
+}
+
+@media (min-width: 768px) {
+  header nav button.toggle {
+    display: none;
+  }
+}
