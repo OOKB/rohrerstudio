@@ -337,7 +337,7 @@ section.content p {
   line-height: 24px;
   list-style: none;
   margin: 4px 0 0 0;
-  float: left;
+  float: right;
   width: 25%;
   padding: 0 15px;
 }
@@ -503,10 +503,21 @@ section.content p {
   #detail-view .detail-info h1 {
     margin-bottom: .5em;
   }
+  #detail-view .detail-info ul.miscellany {
+    margin: 1.5em 0;
+  }
   #detail-view .detail-info figure figcaption {
     position: static;
     width: auto;
     margin: -1.5em 0 .25em 0;
+  }
+  #filters .search-field {
+    display: block;
+    float: none;
+    margin: 0 0 .5em;
+    padding-bottom: .6em;
+    border-bottom: 1px solid;
+    width: 100%;
   }
 }
 
