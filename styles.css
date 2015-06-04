@@ -392,6 +392,10 @@ section.content p {
   color: darkgrey;
 }
 
+#detail-view .content figure figcaption p {
+  margin: .25em;
+}
+
 #filters button {
   background: transparent;
   border: none;
