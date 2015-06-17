@@ -279,23 +279,65 @@ footer a {
 /*  background: lightGray;*/
   padding: 1em;
   margin: 0 -20px;
+  position: relative;
 }
 
 .cycle-slideshow { width: 100%; max-width: 960px; margin: 0 auto; }
 .cycle-slideshow img { width: 100%; height: auto }
 
 .cycle-pager span {
+  color: gray;
+  cursor: pointer;
+  display: inline-block;
   font-size: 3em;
   width: .5em;
   height: .5em;
   line-height: .5;
-  display: inline-block;
-  color: gray;
-  cursor: pointer;
+  margin-top: .2em;
 }
 
 .cycle-pager span.cycle-pager-active {
   color: rgba(205,32,39,1);
+}
+
+.controls a {
+  display: block;
+  padding: 26% 5px 5px;
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  z-index: 200;
+  color: rgba(125,125,125,.25);
+  font-size: 3em;
+  text-decoration: none;
+  /**/
+  background-color: white;
+  background-color: rgba(255,255,255,0);
+  background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0));
+}
+
+.controls a:hover {
+  color: rgba(125,125,125,.9);
+  /**/
+  background-color: white;
+  background-color: rgba(255,255,255,.5);
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+}
+
+.controls a:active {
+  color: darkred;
+}
+
+#prev { left: 0; border-left: 0; }
+#next { right: 0; border-right: 0; }
+
+#prev:hover {
+  background: linear-gradient(to right, rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 100%); /* W3C */
+}
+#next:hover {
+  background: linear-gradient(to left, rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 100%); /* W3C */
 }
 
 /** individual project **/
@@ -356,17 +398,31 @@ section.content p {
   list-style: none;
   margin: 40px 0 0 0;
   border-top: 1px solid rgba(205,32,39,1);
-  padding: 20px 0 0 0;
+  border-bottom: 1px solid rgba(205,32,39,1);
+  padding: 0;
   text-align: center;
   width: 100%;
 }
+
 #detail-view ul.projects-nav li {
-  display: inline-block;
-  margin: 0 15px;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 50%;
 }
 
-#detail-view ul.projects-nav li button {
-  width: 150px;
+ul.projects-nav button {
+  border: none;
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+  outline-color: red;
+}
+
+ul.projects-nav button:hover {
+  background: red;
+  color: white;
 }
 
 .image-thread img {
