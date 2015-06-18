@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rohrer Studio</title>
+
+    <link rel="stylesheet" href="styles.css">
+    
+  </head>
+
+  <body>
+
+    <header class="clearfix">
+      <h1><a href="index.html">Rohrer Studio</a></h1>
+      <nav>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="awards.html">Awards</a></li>
+          <li><a href="articles.html">Articles</a></li>
+        </ul>
+
+        <button class="toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+
+      <section id="detail-view" class="project">
+
+        <div id="homess">
+
+          <div class="cycle-slideshow"
+            data-cycle-fx="scrollHorz"
+            data-cycle-timeout="4000"
+            data-cycle-prev="#prev"
+            data-cycle-next="#next"
+            data-cycle-swipe="true"
+            data-cycle-swipe-fx="scrollHorz"
+            >
+            <img src="https://unsplash.it/960/600?image=443">
+            <img src="https://unsplash.it/960/600?image=448">
+            <img src="https://unsplash.it/960/600?image=22">
+            <img src="https://unsplash.it/960/600?image=44">
+            <img src="https://unsplash.it/960/600?image=46">
+
+            <div class="cycle-pager"></div>
+          </div>
+
+          <div class="center controls">
+            <a href="#" id="prev">&larr;</a> 
+            <a href="#" id="next">&rarr;</a>
+          </div>
+
+        </div>
+
+        <article class="detail-info">
+          <h1>Lorem Ipsum dolor</h1>
+
+          <ul class="miscellany">
+            <li>Date: 2014</li>
+            <li>Location: Lorem Ipsum</li>
+            <li>Kind of building? Kind of Project?</li>
+            <li>Other Misc. project data</li>
+            <li>Videos or other sorts of links?</li>
+          </ul>
+          
+          <section class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur mattis metus, sit amet pulvinar risus egestas id. Donec nec massa enim. Quisque placerat facilisis ex a porta. Etiam et enim id magna luctus facilisis eu et nibh. Suspendisse non bibendum risus. Cras sed turpis feugiat, tincidunt lorem sit amet, porta leo. Cras venenatis diam ut dolor scelerisque, in placerat eros aliquam. Mauris fringilla nisl sit amet purus sagittis vulputate. Nullam vitae elit eget nisl volutpat euismod quis ac nunc. Maecenas eget urna nisi. Nulla elementum fringilla malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse feugiat non sapien quis cursus.
+            </p>
+            <p>
+              Maecenas varius pharetra turpis. Fusce blandit elit et erat ornare malesuada. Praesent ut quam a erat imperdiet euismod vel eu leo. Proin blandit massa sit amet sollicitudin tincidunt. Etiam et massa velit. Praesent varius malesuada ligula vitae porttitor. Quisque sit amet mauris rutrum, eleifend tellus eget, laoreet arcu.
+            </p>
+          </section>
+
+          <br class="clear" />
+
+        </article>
+
+        <ul class="projects-nav clearfix">
+          <li><button class="prev">Previous Project</button></li>
+          <li><button class="next">Next Project</button></li>
+        </ul>
+
+      </section>
+    
+    </main>
+
+    <footer>
+      <p>©2015 Rohrer Studio | Architecture • Interiors</p>
+    </footer>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/20140415/jquery.cycle2.min.js"></script>
+    <script src="http://malsup.github.io/min/jquery.cycle2.swipe.min.js"></script>
+    <script src="http://malsup.github.io/ios6fix.js"></script>
+    <script src="hamburger-nav.js"></script>
+    
+  </body>
+
+</html>
