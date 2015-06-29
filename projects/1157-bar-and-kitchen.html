@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rohrer Studio | 1157 Bar & Kitchen</title>
+
+    <link rel="stylesheet" href="../styles.css">
+
+  </head>
+
+  <body>
+
+    <header class="clearfix">
+      <h1><a href="index.html">Rohrer Studio</a></h1>
+      <nav>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Updates</a></li>
+        </ul>
+
+        <button class="toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+
+      <section id="detail-view" class="project">
+
+        <article class="detail-info clearfix">
+
+          <div class="templated">
+             <!-- mustached -->
+          </div>
+
+        </article>
+
+        <ul class="projects-nav clearfix">
+          <li><button class="prev">Previous Project</button></li>
+          <li><button class="next">Next Project</button></li>
+        </ul>
+
+      </section>
+
+    </main>
+
+    <footer>
+      <p>©2015 Rohrer Studio | Architecture • Interiors</p>
+    </footer>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/20140415/jquery.cycle2.min.js"></script>
+    <script src="http://malsup.github.io/min/jquery.cycle2.swipe.min.js"></script>
+    <script src="http://malsup.github.io/ios6fix.js"></script>
+    <script src="../hamburger-nav.js"></script>
+
+    <script id="project-info" type="text/template">
+    {{#1157-bar-and-kitchen}}
+      <h1>{{title}}</h1>
+
+      <ul class="miscellany">
+        <li>Date: {{year}}</li>
+        <li>Location: {{city}}, {{state}}</li>
+        <li>Area: {{area}} sq.ft</li>
+        <li class="awards {{^awards}}hide{{/awards}}">
+          <strong>Awards</strong>
+          <ul>
+            {{#awards}}
+            <li>{{year}}: {{award}} / {{group}}</li>
+            {{/awards}}
+          </ul>
+        </li>
+        <li class="article {{^article}}hide {{/article}}">
+          <strong>Articles</strong>
+          <ul>
+            {{#article}}
+            <li><a href="{{url}}">{{date}}: {{publication}}</a></li>
+            {{/article}}
+          </ul>
+        </li>
+      </ul>
+
+      <section class="content">
+        {{{content}}}
+
+        <div class="image-thread">
+          {{#images}}
+            <figure>
+              <img src="http:{{cdn}}" alt="{{title}}"/>
+              {{#caption}}
+                <figcaption>
+                  <p>{{caption}}</p>
+                </figcaption>
+              {{/caption}}
+            </figure>
+          {{/images}}
+        </div>
+
+      </section>
+    {{/1157-bar-and-kitchen}}
+    </script>
+
+    <script>
+    $(document).ready(function() {
+
+      $.getJSON('http://rohrerstudio.ezle.io/index.json', function(data) {
+
+        //mustache for images
+        var template = $('#project-info').html();
+        var info = Mustache.to_html(template, data.db.projects);
+        $('.detail-info .templated').html(info);
+        console.log('mustachified');
+
+      });
+
+    });
+    </script>
+
+    <!-- built by Kristian Bjornard and Kai Curry — OOKB.co / CAPE.io — a “Create Anywhere, Publish Everywhere” powered project. -->
+
+  </body>
+
+</html>
