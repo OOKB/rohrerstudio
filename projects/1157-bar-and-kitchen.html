@@ -32,24 +32,9 @@
       </nav>
     </header>
 
-    <main>
+    <main class="project-list">
 
-      <section id="detail-view" class="project">
-
-        <article class="detail-info clearfix">
-
-          <div class="templated">
-             <!-- mustached -->
-          </div>
-
-        </article>
-
-        <ul class="projects-nav clearfix">
-          <li><button class="prev">Previous Project</button></li>
-          <li><button class="next">Next Project</button></li>
-        </ul>
-
-      </section>
+      <!-- mustached -->
 
     </main>
 
@@ -66,45 +51,65 @@
 
     <script id="project-info" type="text/template">
     {{#1157-bar-and-kitchen}}
-      <h1>{{title}}</h1>
 
-      <ul class="miscellany">
-        <li>Date: {{year}}</li>
-        <li>Location: {{city}}, {{state}}</li>
-        <li>Area: {{area}} sq.ft</li>
-        <li class="awards {{^awards}}hide{{/awards}}">
-          <strong>Awards</strong>
-          <ul>
-            {{#awards}}
-            <li>{{year}}: {{award}} / {{group}}</li>
-            {{/awards}}
-          </ul>
-        </li>
-        <li class="article {{^article}}hide {{/article}}">
-          <strong>Articles</strong>
-          <ul>
-            {{#article}}
-            <li><a href="{{url}}">{{date}}: {{publication}}</a></li>
-            {{/article}}
-          </ul>
-        </li>
-      </ul>
+      <div class="hero">
+         <img src="http://{{images.0.cdn}}" alt="a big moment"/>
+      </div>
 
-      <section class="content">
-        {{{content}}}
+      <section id="detail-view" class="project">
 
-        <div class="image-thread">
-          {{#images}}
-            <figure>
-              <img src="http:{{cdn}}" alt="{{title}}"/>
-              {{#caption}}
-                <figcaption>
-                  <p>{{caption}}</p>
-                </figcaption>
-              {{/caption}}
-            </figure>
-          {{/images}}
-        </div>
+        <article class="detail-info clearfix">
+
+          <div class="templated">
+            <h1>{{title}}</h1>
+
+            <ul class="miscellany">
+              <li>Date: {{year}}</li>
+              <li>Location: {{city}}, {{state}}</li>
+              <li>Area: {{area}} sq.ft</li>
+              <li class="awards {{^awards}}hide{{/awards}}">
+                <strong>Awards</strong>
+                <ul>
+                  {{#awards}}
+                  <li>{{year}}: {{award}} / {{group}}</li>
+                  {{/awards}}
+                </ul>
+              </li>
+              <li class="article {{^article}}hide {{/article}}">
+                <strong>Articles</strong>
+                <ul>
+                  {{#article}}
+                  <li><a href="{{url}}">{{date}}: {{publication}}</a></li>
+                  {{/article}}
+                </ul>
+              </li>
+            </ul>
+
+            <section class="content">
+              {{{content}}}
+
+              <div class="image-thread">
+                {{#images}}
+                  <figure>
+                    <img src="http:{{cdn}}" alt="{{title}}"/>
+                    {{#caption}}
+                      <figcaption>
+                        <p>{{caption}}</p>
+                      </figcaption>
+                    {{/caption}}
+                  </figure>
+                {{/images}}
+              </div>
+
+            </section>
+          </div>
+
+        </article>
+
+        <ul class="projects-nav clearfix">
+          <li><button class="prev">Previous Project</button></li>
+          <li><button class="next">Next Project</button></li>
+        </ul>
 
       </section>
     {{/1157-bar-and-kitchen}}
@@ -118,7 +123,7 @@
         //mustache for images
         var template = $('#project-info').html();
         var info = Mustache.to_html(template, data.db.projects);
-        $('.detail-info .templated').html(info);
+        $('.project-list').html(info);
         console.log('mustachified');
 
       });
