@@ -21,8 +21,7 @@
           <li class="active"><a href="projects.html">Projects</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="awards.html">Awards</a></li>
-          <li><a href="articles.html">Articles</a></li>
+          <li><a href="updates.html">Updates</a></li>
         </ul>
 
         <button class="toggle">
@@ -36,40 +35,41 @@
     <main class="clearfix" id="filterable">
       <ul id="filters">
         <li class="search-field"><input class="search" placeholder="Search Projects" /></li>
+        <li><button class="sort" data-tag="none" id="filter-none">All</button></li>
+        <li><button class="sort" data-tag="adaptive">Adaptive Reuse</button></li>
         <li><button class="sort" data-tag="education">Education</button></li>
         <li><button class="sort" data-tag="government">Government</button></li>
         <li><button class="sort" data-tag="green">Green</button></li>
         <li><button class="sort" data-tag="historic">Historic</button></li>
         <li><button class="sort" data-tag="industrial">Industrial</button></li>
         <li><button class="sort" data-tag="offices">Offices</button></li>
-        <li><button class="sort" data-tag="senior">Senior</button></li>
         <li><button class="sort" data-tag="religious">Religious</button></li>
         <li><button class="sort" data-tag="education">Residential</button></li>
         <li><button class="sort" data-tag="restaurant">Restaurant</button></li>
         <li><button class="sort" data-tag="retail">Retail</button></li>
-        <li><button class="sort" data-tag="none" id="filter-none">Show All</button></li>
+        <li><button class="sort" data-tag="senior">Senior</button></li>
       </ul>
       <ul id="projects" class="list">
         <li class="project-preview">
-          <img src="https://unsplash.it/555/555?image=443" alt="some project or something"/>
+          <a href="projects/1157-bar-and-kitchen.html"><img src="https://unsplash.it/555/555?image=443" alt="some project or something"/></a>
           <div class="info">
-            <h2 class="title">Project Title</h2>
+            <h2 class="title">1157 Bar & Kitchen</h2>
             <p class="description">Some description?</p>
-            <p class="category">education</p>
+            <p class="category">restaurant, adaptive</p>
           </div>
         </li>
         <li class="project-preview">
-          <img src="https://unsplash.it/555/555?image=448" alt="some project or something"/>
+          <a href="projects/agora-16-west-madison.html"><img src="https://unsplash.it/555/555?image=448" alt="some project or something"/></a>
           <div class="info">
-            <h2 class="title">Project Title</h2>
+            <h2 class="title">16 West Madison</h2>
             <p class="description">Some description?</p>
             <p class="category">restaurant</p>
           </div>
         </li>
         <li class="project-preview featured">
-          <img src="https://unsplash.it/555/555?image=22" alt="some project or something"/>
+          <a href="projects/agora-tcc.html"><img src="https://unsplash.it/555/555?image=22" alt="some project or something"/></a>
           <div class="info">
-            <h2 class="title">Veritas Veni Vin Veci Velodrome</h2>
+            <h2 class="title">The Call Center</h2>
             <p>Pickled beard jean shorts you probably haven't heard of them locavore ethical.</p>
             <p class="category">restaurant</p>
           </div>
@@ -77,7 +77,7 @@
         <li class="project-preview featured">
           <img src="https://unsplash.it/555/555?image=44" alt="some project or something"/>
           <div class="info">
-            <h2 class="title">Project Title</h2>
+            <h2 class="title">Colombiere Stable</h2>
             <p>Trust fund yr put a bird on it, vegan salvia 90's butcher umami hella gastropub..</p>
             <p class="category">offices</p>
           </div>
@@ -85,7 +85,7 @@
         <li class="project-preview featured">
           <img src="https://unsplash.it/555/555?image=46" alt="some project or something"/>
           <div class="info">
-            <h2 class="title">Project Title</h2>
+            <h2 class="title">A Master Suite Renovation</h2>
             <p>Umami before they sold out mustache, food truck shabby chic Brooklyn Wes Anderson. </p>
             <p class="category">senior</p>
           </div>
@@ -93,7 +93,7 @@
         <li class="project-preview">
           <img src="https://unsplash.it/555/555?image=58" alt="some project or something"/>
           <div class="info">
-            <h2 class="title">Lorem Ipsum dolor</h2>
+            <h2 class="title">Total Office Interiors</h2>
             <p>Tumblr tilde keffiyeh normcore organic forage.</p>
             <p class="category">government</p>
           </div>
@@ -420,16 +420,26 @@
         $('#filters li button').click(function() {
 
           var selection = $(this).data('tag');
+          console.log(selection);
 
           featureList.filter(function(item) {
-            if (item.values().category == selection) {
-              return true;
-            } else if (selection == "none") {
+
+            var toBeSplit = item.values().category.toLowerCase();
+            var tryThis   = toBeSplit.split(',');
+
+            for (var i=0, j=tryThis.length; i<j; i++) {
+              var iReallyNeedThisToWork = tryThis[i];
+              if (iReallyNeedThisToWork == selection) {
+                return true;
+              }
+            }
+
+            if (selection == "none") {
+              return false;
+            } else {
               return false;
             }
-            else {
-              return false;
-            }
+
           });
           return false;
         });
@@ -439,11 +449,6 @@
           return false;
         });
 
-        // fake links
-        $('li.project-preview').on('click touchstart', function () {
-          var href = "project.html";
-          window.location = href;
-        });
       });
     </script>
 

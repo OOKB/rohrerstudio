@@ -1,7 +1,7 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400');
 @import url('http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic');
 @import url('http://fonts.googleapis.com/css?family=PT+Mono');
-
 .opensans {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
@@ -14,9 +14,16 @@
   font-family: 'PT Mono', 'droid mono', menlo, monaco, monospace;
 }
 
-* { box-sizing: border-box; font-size: 1em; line-height: 1.5em; }
+* {
+  box-sizing: border-box;
+  font-size: 1em;
+  line-height: 1.5em;
+}
 
-.clear { clear: both; display: block; }
+.clear {
+  clear: both;
+  display: block;
+}
 
 .clearfix::after {
   content: "";
@@ -24,8 +31,15 @@
   clear: both;
 }
 
-.show { display: initial; visibility: initial; }
-.hide { display: none; visibility: hidden; }
+.show {
+  display: initial;
+  visibility: initial;
+}
+
+.hide {
+  display: none;
+  visibility: hidden;
+}
 
 html {
   margin: 0;
@@ -35,16 +49,30 @@ html {
 
 body {
   margin: 0;
-  padding: 20px;
+  padding: 120px 2em 2em 2em;
   width: 100%;
   color: gray;
-  background: rgba(250,248,248,1);
+  /*  background: rgba(250,248,248,1);*/
+  background: white;
 }
 
 p {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
+.column,
+.columns {
+  float: left;
+  padding: 0 1em;
+}
+
+.extras {
+  margin: 0 -1em;
+}
+
+.halfwidth {
+  width: 50%;
+}
 /******/
 
 header {
@@ -54,11 +82,11 @@ header {
 
 header h1,
 header h1 a {
-  color: rgba(205,32,39,1);
+  color: rgba(205, 32, 39, 1);
   text-transform: lowercase;
   font-weight: normal;
   margin: 0;
-  float:left;
+  float: left;
   font-size: 150%;
 }
 
@@ -106,9 +134,7 @@ header nav ul li.active a {
   border-bottom: 2px solid red;
   box-sizing: border-box;
 }
-
 /******/
-
 /****
   Refine these stlyes more — start with a simpler, single column, then grow.
   Also, it should get even wider than just 6 columns at even larger screen sizes.
@@ -202,16 +228,15 @@ header nav ul li.active a {
 li.project-preview .info {
   color: gray;
   position: absolute;
-  left:0;
-  right:0;
-  bottom:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: .25em .5em;
-  background: rgba(250,248,248,1);
+  background: rgba(250, 248, 248, 1);
   transition: all 300ms ease-out;
   font-size: 75%;
   height: 4em;
 }
-
 /*
 li.project-preview:hover .info {
   top: 50%;
@@ -223,7 +248,7 @@ li.project-preview:hover .info {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(205,32,39,1);
+  color: rgba(205, 32, 39, 1);
   text-decoration: none;
   font-size: 1.1em;
   line-height: 1.2;
@@ -244,7 +269,23 @@ footer {
 footer a {
   color: gray;
   text-decoration: none;
-  border-bottom: 1px solid rgba(205,32,39,.75);
+  border-bottom: 1px solid rgba(205, 32, 39, .75);
+}
+
+body.image-list-ex {
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.image-list-ex footer {
+  background: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 30px;
 }
 
 .other section {
@@ -252,7 +293,7 @@ footer a {
 }
 
 .columns {
-  float:left;
+  float: left;
 }
 
 .columns.half {
@@ -274,7 +315,6 @@ footer a {
 #projects .category {
   display: none;
 }
-
 /* demo home slideshow */
 
 #homess {
@@ -284,8 +324,19 @@ footer a {
   position: relative;
 }
 
-.cycle-slideshow { width: 100%; max-width: 1100px; margin: 0 auto; }
-.cycle-slideshow img { width: 100%; height: auto }
+.detail-info #homess {
+  margin-bottom: 2em;
+}
+
+.cycle-slideshow {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 550px;
+}
+
+.cycle-slideshow img {}
 
 .cycle-pager span {
   color: gray;
@@ -302,8 +353,8 @@ footer a {
 }
 
 .cycle-pager span.cycle-pager-active {
-  color: rgba(205,32,39,1);
-  background: rgba(205,32,39,1);
+  color: rgba(205, 32, 39, 1);
+  background: rgba(205, 32, 39, 1);
 }
 
 .controls a {
@@ -312,46 +363,55 @@ footer a {
   width: 30%;
   height: 100%;
   position: absolute;
-  top:0;
+  top: 0;
   bottom: 0;
-  z-index: 200;
-  color: rgba(125,125,125,.25);
+  z-index: 101;
+  color: rgba(125, 125, 125, .25);
   font-size: 3em;
   text-decoration: none;
-  /**/
   background-color: white;
-  background-color: rgba(255,255,255,0);
-  background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0));
+  background-color: rgba(255, 255, 255, 0);
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 }
 
 .controls a:hover {
-  color: rgba(125,125,125,.9);
-  /**/
+  color: rgba(125, 125, 125, .9);
   background-color: white;
-  background-color: rgba(255,255,255,.5);
-  background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+  background-color: rgba(255, 255, 255, .5);
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
 }
 
 .controls a:active {
   color: darkred;
 }
 
-#prev { left: 0; border-left: 0; }
-#next { right: 0; border-right: 0; }
+#prev {
+  left: 0;
+  border-left: 0;
+}
+
+#next {
+  right: 0;
+  border-right: 0;
+}
 
 #prev:hover {
-  background: linear-gradient(to right, rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 100%); /* W3C */
-}
-#next:hover {
-  background: linear-gradient(to left, rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 100%); /* W3C */
+  background: linear-gradient(to right, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
 }
 
+#next:hover {
+  background: linear-gradient(to left, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
+}
 /** individual project **/
+
 #detail-view .detail-info {
   width: 100%;
   max-width: 1200px;
-  margin: 30px auto;
-  padding: 0 20px;
+  margin: 0 auto 30px auto;
+  padding: 0 20px 20px;
   color: gray;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
@@ -387,20 +447,43 @@ section.content p {
 }
 
 #detail-view .detail-info ul.miscellany li {
-  border-bottom: 1px solid rgba(205,32,39,1);
+  border-bottom: 1px solid rgba(205, 32, 39, 1);
   font-size: 12px;
   padding: .5em 0;
 }
 
 #detail-view .detail-info ul.miscellany li:first-child {
-  border-top: 1px solid rgba(205,32,39,1);
+  border-top: 1px solid rgba(205, 32, 39, 1);
+}
+
+#detail-view .detail-info ul.miscellany ul.sub {
+  margin: 0;
+  padding-left: 20px;
+}
+
+#detail-view .detail-info ul.miscellany ul.sub li {
+  border-bottom: none;
+  border-top: none;
+  font-size: 10px;
+}
+
+#detail-view .detail-info ul.miscellany ul.sub li a {
+  color: gray;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(205, 32, 39, .15);
+  transition: all 400ms;
+}
+
+#detail-view .detail-info ul.miscellany ul.sub li a:hover {
+  color: darkgray;
+  border-bottom: 1px solid rgba(205, 32, 39, .5);
 }
 
 #detail-view ul.projects-nav {
   list-style: none;
   margin: 40px 0 0 0;
-  border-top: 1px solid rgba(205,32,39,1);
-  border-bottom: 1px solid rgba(205,32,39,1);
+  border-top: 1px solid rgba(205, 32, 39, 1);
+  border-bottom: 1px solid rgba(205, 32, 39, 1);
   padding: 0;
   text-align: center;
   width: 100%;
@@ -443,7 +526,7 @@ ul.projects-nav button:hover {
   margin: 0;
   padding: 0;
   position: absolute;
-  top:0;
+  top: 0;
   left: calc(100% + 1em);
   width: 50%;
   font-size: 85%;
@@ -482,56 +565,71 @@ ul.projects-nav button:hover {
   width: calc(100% + 40px);
 }
 
-/** start some responsive stuff? **/
+.project-list.bgbleed .hero {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
+.project-list.bgbleed #detail-view .detail-info {
+  background: white;
+  padding-top: 2em;
+  margin-top: 200px;
+}
+/** start some responsive stuff? **/
 /** Hamburger menu stuff **/
+
 @media (max-width: 768px) {
+  body {
+    padding: 2rem;
+  }
   header nav {
     position: fixed;
     bottom: 0;
-    left:0;
+    left: 0;
     right: 0;
-    right:0;
-    z-index: 100;
+    right: 0;
+    z-index: 199;
     width: 100%;
   }
-
   header nav ul {
     background: white;
     display: none;
     list-style: none;
     margin: 0;
     padding: 0 0 70px 0;
-    border-top:1px solid red;
+    border-top: 1px solid red;
     position: absolute;
     bottom: 0;
     width: 100%;
   }
-
   header nav ul li {
     border-bottom: 1px solid red;
     display: list-item;
     float: none;
   }
-
   header nav ul li a {
     display: block;
     padding: 5px;
     text-decoration: none;
     transition: all 500ms;
   }
-
   header nav ul li a:hover {
     background: gray;
     text-decoration: none;
     color: white;
   }
-
   header nav button.toggle {
     background: white;
     border: 1px solid red;
     border-radius: 2px;
-    box-shadow: 0 0 6px rgba(0,0,0,.2);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .2);
     display: block;
     height: 60px;
     margin: 5px;
@@ -539,10 +637,10 @@ ul.projects-nav button:hover {
     width: 60px;
     border-radius: 30px;
     /**/
+
     position: relative;
     z-index: 200;
   }
-
   header nav button.toggle span {
     background: gray;
     border-radius: 3px;
@@ -551,12 +649,10 @@ ul.projects-nav button:hover {
     margin: 6px auto;
     width: 60%;
   }
-
   header nav button.toggle:active {
     background: darkred;
-    box-shadow: inset 0 3px 3px rgba(0,0,0,.2);
+    box-shadow: inset 0 3px 3px rgba(0, 0, 0, .2);
   }
-
   header nav button.toggle:active span {
     background: white;
   }
@@ -567,13 +663,14 @@ ul.projects-nav button:hover {
     border-bottom: none;
   }
   /** fix single page demo styles **/
+
   #detail-view .detail-info {
     padding: 0;
   }
   #detail-view .detail-info ul.miscellany,
   #detail-view .detail-info section.content,
   #detail-view .detail-info h1 {
-    float:none;
+    float: none;
     width: 100%;
     padding: 0;
   }
@@ -601,5 +698,15 @@ ul.projects-nav button:hover {
 @media (min-width: 768px) {
   header nav button.toggle {
     display: none;
+  }
+  header {
+    position: fixed;
+    background: white;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 2em 2em 0;
+    z-index: 200;
+    height: 100px;
   }
 }
