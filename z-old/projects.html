@@ -1,0 +1,161 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rohrer Studio</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+  <body>
+
+    <header class="clearfix">
+      <h1><a href="index.html">Rohrer Studio</a></h1>
+      <nav>
+        <ul>
+          <li class="active"><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="updates.html">Updates</a></li>
+        </ul>
+
+        <button class="toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="clearfix" id="filterable">
+      <ul id="filters">
+        <li class="search-field"><input class="search" placeholder="Search Projects" /></li>
+        <li><button class="sort" data-tag="none" id="filter-none">All</button></li>
+        <li><button class="sort" data-tag="adaptive">Adaptive Reuse</button></li>
+        <li><button class="sort" data-tag="education">Education</button></li>
+        <li><button class="sort" data-tag="government">Government</button></li>
+        <li><button class="sort" data-tag="green">Green</button></li>
+        <li><button class="sort" data-tag="historic">Historic</button></li>
+        <li><button class="sort" data-tag="industrial">Industrial</button></li>
+        <li><button class="sort" data-tag="offices">Offices</button></li>
+        <li><button class="sort" data-tag="religious">Religious</button></li>
+        <li><button class="sort" data-tag="education">Residential</button></li>
+        <li><button class="sort" data-tag="restaurant">Restaurant</button></li>
+        <li><button class="sort" data-tag="retail">Retail</button></li>
+        <li><button class="sort" data-tag="senior">Senior</button></li>
+      </ul>
+      <ul id="projects" class="list">
+        <li class="project-preview">
+          <a href="projects/1157-bar-and-kitchen.html"><img src="https://unsplash.it/555/555?image=443" alt="some project or something"/></a>
+          <div class="info">
+            <h2 class="title">1157 Bar & Kitchen</h2>
+            <p class="description">Some description?</p>
+            <p class="category">restaurant, adaptive</p>
+          </div>
+        </li>
+        <li class="project-preview">
+          <a href="projects/agora-16-west-madison.html"><img src="https://unsplash.it/555/555?image=448" alt="some project or something"/></a>
+          <div class="info">
+            <h2 class="title">16 West Madison</h2>
+            <p class="description">Some description?</p>
+            <p class="category">restaurant</p>
+          </div>
+        </li>
+        <li class="project-preview featured">
+          <a href="projects/agora-tcc.html"><img src="https://unsplash.it/555/555?image=22" alt="some project or something"/></a>
+          <div class="info">
+            <h2 class="title">The Call Center</h2>
+            <p>Pickled beard jean shorts you probably haven't heard of them locavore ethical.</p>
+            <p class="category">restaurant</p>
+          </div>
+        </li>
+        <li class="project-preview featured">
+          <img src="https://unsplash.it/555/555?image=44" alt="some project or something"/>
+          <div class="info">
+            <h2 class="title">Colombiere Stable</h2>
+            <p>Trust fund yr put a bird on it, vegan salvia 90's butcher umami hella gastropub..</p>
+            <p class="category">offices</p>
+          </div>
+        </li>
+        <li class="project-preview featured">
+          <img src="https://unsplash.it/555/555?image=46" alt="some project or something"/>
+          <div class="info">
+            <h2 class="title">A Master Suite Renovation</h2>
+            <p>Umami before they sold out mustache, food truck shabby chic Brooklyn Wes Anderson. </p>
+            <p class="category">senior</p>
+          </div>
+        </li>
+        <li class="project-preview">
+          <img src="https://unsplash.it/555/555?image=58" alt="some project or something"/>
+          <div class="info">
+            <h2 class="title">Total Office Interiors</h2>
+            <p>Tumblr tilde keffiyeh normcore organic forage.</p>
+            <p class="category">government</p>
+          </div>
+        </li>
+        <!-- end test cases -->
+        <div class="clear"></div>
+      </ul>
+    </main>
+
+    <footer>
+      <p>©2015 Rohrer Studio | Architecture • Interiors</p>
+    </footer>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+
+        var options = {
+          valueNames: [ 'category', 'title', 'description' ]
+        };
+
+        var featureList = new List('filterable', options);
+
+        $('#filters li button').click(function() {
+
+          var selection = $(this).data('tag');
+          console.log(selection);
+
+          featureList.filter(function(item) {
+
+            var toBeSplit = item.values().category.toLowerCase();
+            var tryThis   = toBeSplit.split(',');
+
+            for (var i=0, j=tryThis.length; i<j; i++) {
+              var iReallyNeedThisToWork = tryThis[i];
+              if (iReallyNeedThisToWork == selection) {
+                return true;
+              }
+            }
+
+            if (selection == "none") {
+              return false;
+            } else {
+              return false;
+            }
+
+          });
+          return false;
+        });
+
+        $('#filter-none').click(function() {
+          featureList.filter();
+          return false;
+        });
+
+      });
+    </script>
+
+    <script src="hamburger-nav.js"></script>
+
+  </body>
+
+</html>
