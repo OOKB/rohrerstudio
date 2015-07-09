@@ -358,7 +358,7 @@ body.image-list-ex {
   min-height: 550px;
 }
 
-.front .cycle-slideshow img {width: 100%;}
+/*.front .cycle-slideshow img {width: 100%;}*/
 
 .cycle-pager span {
   color: gray;
