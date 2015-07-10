@@ -50,7 +50,7 @@ html {
 
 body {
   margin: 0;
-  padding: 120px 2em 2em 2em;
+  padding: 100px 2em 2em 2em;
   width: 100%;
   color: gray;
   /*  background: rgba(250,248,248,1);*/
@@ -312,7 +312,7 @@ body.image-list-ex {
 }
 
 .other section {
-  padding: 100px 0
+  padding: 100px 0;
 }
 
 .columns {
@@ -754,6 +754,6 @@ ul.projects-nav button:hover {
     left: 0;
     padding: 2em 2em 0;
     z-index: 200;
-    height: 100px;
+    height: 99px;
   }
 }
