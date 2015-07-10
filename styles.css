@@ -709,11 +709,19 @@ ul.projects-nav button:hover {
   header nav ul li.active a {
     border-bottom: none;
   }
+
+  header h1,
+  header h1 a {
+    float: none;
+    text-align: center;
+  }
+
   /** fix single page demo styles **/
 
   #detail-view .detail-info {
     padding: 0;
   }
+
   #detail-view .detail-info ul.miscellany,
   #detail-view .detail-info section.content,
   #detail-view .detail-info h1 {
@@ -721,17 +729,21 @@ ul.projects-nav button:hover {
     width: 100%;
     padding: 0;
   }
+
   #detail-view .detail-info h1 {
     margin-bottom: .5em;
   }
+
   #detail-view .detail-info ul.miscellany {
     margin: 1.5em 0;
   }
+
   #detail-view .detail-info figure figcaption {
     position: static;
     width: auto;
     margin: -1.5em 0 .25em 0;
   }
+
   #filters .search-field {
     display: block;
     float: none;
@@ -740,6 +752,7 @@ ul.projects-nav button:hover {
     border-bottom: 1px solid;
     width: 100%;
   }
+  footer { text-align: center; }
 }
 
 @media (min-width: 768px) {
