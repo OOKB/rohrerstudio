@@ -284,7 +284,8 @@ footer {
     bottom: 0;
     left: 0;
     background: white;
-    padding: .5em 2em;
+    padding: 0 2em 0.3em;
+    z-index: 999;
   }
 }
 
@@ -346,6 +347,11 @@ body.image-list-ex {
   position: relative;
 }
 
+.front #homess {
+  padding-bottom: 3em;
+  height: calc(72.5vh + 3em);
+}
+
 .detail-info #homess {
   margin-bottom: 2em;
 }
@@ -355,11 +361,30 @@ body.image-list-ex {
   max-width: 1100px;
   margin: 0 auto;
   text-align: center;
-  min-height: 550px;
 }
 
-/*.front .cycle-slideshow img {width: 100%;}*/
+.front .cycle-slideshow {
+  height: 72.5vh;
+}
 
+.cycle-slideshow img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.front .cycle-slideshow img {
+  display:block;
+  height: auto;
+  width: auto;
+}
+
+.cycle-pager {
+  position: relative;
+  margin-top:.5em;
+}
+.front .cycle-pager {
+  margin-top: 0;
+  top:.5em;
+}
 .cycle-pager span {
   color: gray;
   cursor: pointer;
@@ -381,7 +406,7 @@ body.image-list-ex {
 
 .controls a {
   display: block;
-  padding: 26% 5px 5px;
+  padding: 30vh 5px 5px;
   width: 30%;
   height: 100%;
   position: absolute;
