@@ -275,18 +275,31 @@ html, body {
   }
 }
 
-.mt2  { margin-top:   2em; }
-
-.ml0  { margin-left:  0;   }
-.mln1 { margin-left: -1em; }
-
-.pl1  { padding-left: 1em; }
-
 ul.styleless {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
+.mt0     { margin-top:     0;       }
+.mt1     { margin-top:     1em;     }
+.mt2     { margin-top:     2em;     }
+
+.mb0     { margin-bottom:  0;       }
+.mb0p5   { margin-bottom:  0.5em;   }
+.mb1     { margin-bottom:  1em;     }
+
+.ml0     { margin-left:    0;       }
+.mln1    { margin-left:   -1em;     }
+
+.pb0     { padding-bottom: 0;       }
+
+.pl1     { padding-left:   1em;     }
+
+.bb0     { border-bottom: none;     }
+.bb1     { border-bottom: 1px solid }
+.bb2     { border-bottom: 2px solid }
+
 /* Base type and layout Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 body {
@@ -306,3 +319,6 @@ small,
 .small {
   font-size: .9rem;
 }
+
+.h1 { font-size: 2.617924em; }
+.h2 { font-size: 1.618em; }
