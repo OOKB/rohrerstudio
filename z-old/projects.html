@@ -8,7 +8,7 @@
 
     <title>Rohrer Studio</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
 
   </head>
 
@@ -127,11 +127,11 @@
           featureList.filter(function(item) {
 
             var toBeSplit = item.values().category.toLowerCase();
-            var tryThis   = toBeSplit.split(',');
+            var tryThis   = toBeSplit.split(', ');
+            console.log(tryThis);
 
             for (var i=0, j=tryThis.length; i<j; i++) {
-              var iReallyNeedThisToWork = tryThis[i];
-              if (iReallyNeedThisToWork == selection) {
+              if (tryThis[i] == selection) {
                 return true;
               }
             }

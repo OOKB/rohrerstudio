@@ -35,75 +35,81 @@
     <main class="clearfix" id="filterable">
 
       <div id="filters" class="clearfix button-group filters-button-group">
-        <button class="button" data-filter="*">All</button>
-        <button class="button" data-filter=".Adaptive">Adaptive Reuse</button>
-        <button class="button" data-filter=".Historic">Historic Renovation</button>
-        <button class="button" data-filter=".Historic">Interior Renovation</button>
-        <button class="button" data-filter=".Office">Office</button>
-        <button class="button" data-filter=".Restaurant">Restaurant</button>
-        <button class="button" data-filter=".Renovation">Renovation</button>
-        <button class="button" data-filter=".Tenant">Tenant Fit Out</button>
+        <button class="sort button" data-tag="none" id="filter-none">All</button>
+        <button class="sort button" data-tag="adaptive reuse">Adaptive Reuse</button>
+        <button class="sort button" data-tag="historic renovation">Historic Renovation</button>
+        <button class="sort button" data-tag="interior renovation">Interior Renovation</button>
+        <button class="sort button" data-tag="office">Office</button>
+        <button class="sort button" data-tag="restaurant">Restaurant</button>
+        <button class="sort button" data-tag="renovation">Renovation</button>
+        <button class="sort button" data-tag="tenant fit out">Tenant Fit Out</button>
       </div>
 
       <ul id="projects" class="list clearfix grid">
         <script id="project-template" type="text/x-mustache-template">
           {{#1157-bar-and-kitchen}}
-          <li class="project-preview {{#project-type}} {{.}} {{/project-type}} {{year}}">
+          <li class="project-preview">
             <a href="projects/{{folder}}.html">
               <img src="http://{{thumb.images.0.cdn}}" /> <!-- decent start to thumbnails -->
             </a>
             <div class="info">
               <h2 class="title">{{title}}</h2>
+              <div class="category">{{#project-type}}{{.}}, {{/project-type}}</div>
             </div>
           </li>
           {{/1157-bar-and-kitchen}}
           {{#agora-16-west-madison}}
-          <li class="project-preview {{#project-type}} {{.}} {{/project-type}} {{year}}">
+          <li class="project-preview">
             <a href="projects/{{folder}}.html">
               <img src="http://{{thumb.images.0.cdn}}" /> <!-- decent start to thumbnails -->
             </a>
             <div class="info">
               <h2 class="title">{{title}}</h2>
+              <div class="category">{{#project-type}}{{.}}, {{/project-type}}</div>
             </div>
           </li>
           {{/agora-16-west-madison}}
           {{#agora-tcc }}
-          <li class="project-preview {{#project-type}} {{.}} {{/project-type}} {{year}}">
+          <li class="project-preview">
             <a href="projects/{{folder}}.html">
               <img src="http://{{thumb.images.0.cdn}}" /> <!-- decent start to thumbnails -->
             </a>
             <div class="info">
               <h2 class="title">{{title}}</h2>
+              <div class="category">{{#project-type}}{{.}}, {{/project-type}}</div>
             </div>
           </li>
           {{/agora-tcc}}
           {{#colombiere-stable}}
-          <li class="project-preview {{#project-type}} {{.}} {{/project-type}} {{year}}">
+          <li class="project-preview">
             <a href="projects/{{folder}}.html">
               <img src="http://{{thumb.images.0.cdn}}" /> <!-- decent start to thumbnails -->
             </a>
             <div class="info">
               <h2 class="title">{{title}}</h2>
+              <div class="category">{{#project-type}}{{.}}, {{/project-type}}</div>
             </div>
           </li>
           {{/colombiere-stable}}
           {{#private-residence-caplan}}
-          <li class="project-preview {{#project-type}} {{.}} {{/project-type}} {{year}}">
+          <li class="project-preview">
             <a href="projects/{{folder}}.html">
               <img src="http://{{thumb.images.0.cdn}}" /> <!-- decent start to thumbnails -->
             </a>
             <div class="info">
               <h2 class="title">{{title}}</h2>
+              <div class="category">{{#project-type}}{{.}}, {{/project-type}}</div>
             </div>
           </li>
           {{/private-residence-caplan}}
           {{#total-office-interiors}}
-          <li class="project-preview {{#project-type}} {{.}} {{/project-type}} {{year}}">
+          <li class="project-preview">
             <a href="projects/{{folder}}.html">
               <img src="http://{{thumb.images.0.cdn}}" /> <!-- decent start to thumbnails -->
             </a>
             <div class="info">
               <h2 class="title">{{title}}</h2>
+              <div class="category">{{#project-type}}{{.}}, {{/project-type}}</div>
             </div>
           </li>
           {{/total-office-interiors}}
@@ -118,7 +124,9 @@
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
     <script>
+
       $.getJSON('http://rohrerstudio.ezle.io/index.json', function(data) {
 
         //mustache for images
@@ -126,6 +134,45 @@
         var info = Mustache.to_html(template, data.db.projects);
         $('#projects').html(info);
         console.log('mustachified');
+        // done with mustache templating
+
+        // try to get list.js to work with this pairing
+        var options = {
+          valueNames: [ 'category', 'title', 'description' ]
+        };
+
+        var featureList = new List('filterable', options);
+
+        $('button.sort').click(function() {
+
+          var selection = $(this).data('tag');
+
+          featureList.filter(function(item) {
+
+            var toBeSplit = item.values().category.toLowerCase();
+            var tryThis   = toBeSplit.split(', ');
+
+            for (var i=0, j=tryThis.length; i<j; i++) {
+              if (tryThis[i] == selection) {
+                return true;
+              }
+            }
+
+            if (selection == "none") {
+              return false;
+            } else {
+              return false;
+            }
+
+          });
+          return false;
+        });
+
+        $('#filter-none').click(function() {
+          featureList.filter();
+          return false;
+        });
+
 
       });
     </script>
