@@ -282,6 +282,11 @@ html, body {
 
 .pl1  { padding-left: 1em; }
 
+ul.styleless {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 /* Base type and layout Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 body {

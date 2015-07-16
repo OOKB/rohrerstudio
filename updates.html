@@ -8,6 +8,7 @@
 
     <title>Rohrer Studio | Architecture • Interiors</title>
 
+    <link rel="stylesheet" href="structure.css">
     <link rel="stylesheet" href="styles.css">
   </head>
 
@@ -35,13 +36,52 @@
 
     <main class="clearfix">
 
-      <article>
-        <ul id="awards">
-          <!-- stuff goes here? -->
-          <script id="award-template" type="text/x-mustache-template">
-            <li><p><span>{{year}}</span> - {{award}}, {{group}} / {{project}}</p></li>
-          </script>
-        </ul>
+      <article class="container mt2">
+        <div class="group">
+          <section class="column halfwidth">
+            <h2>Awards</h2>
+            <ul id="awards" class="styleless">
+              <!-- stuff goes here? -->
+              <script id="award-template" type="text/x-mustache-template">
+                <li>
+                  <div class="group">
+                    <img src="https://unsplash.imgix.net/photo-1433785567155-bf5530cab72c?fm=jpg&q=75&rect=450,1000,1400,1400&w=288" class="column three mw100" />
+                    <p class="column nine"><span>{{year}}</span> <br/>{{award}}, {{group}} <br/>{{project}}</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="group">
+                    <img src="https://ununsplash.imgix.net/photo-1422284763110-6d0edd657b13?fm=jpg&q=75&rect=800,825,900,900&w=288" class="column three mw100" />
+                    <p class="column nine"><span>{{year}}</span> <br/>{{award}}, {{group}} <br/>{{project}}</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="group">
+                    <img src="https://unsplash.imgix.net/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?fm=jpg&q=75&rect=900,600,1800,1800&w=144" class="column three mw100" />
+                    <p class="column nine"><span>{{year}}</span> <br/>{{award}}, {{group}} <br/>{{project}}</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="group">
+                    <img src="https://unsplash.imgix.net/photo-1428976365951-b70e0fa5c551?fm=jpg&q=75&rect=1100,100,2400,2400&w=144" class="column three mw100" />
+                    <p class="column nine"><span>{{year}}</span> <br/>{{award}}, {{group}} <br/>{{project}}</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="group">
+                    <img src="https://ununsplash.imgix.net/photo-1429043794791-eb8f26f44081?fm=jpg&q=75&rect=2200,800,1500,1500&w=144" class="column three mw100" />
+                    <p class="column nine"><span>{{year}}</span> <br/>{{award}}, {{group}} <br/>{{project}}</p>
+                  </div>
+                </li>
+              </script>
+            </ul>
+          </section>
+          <section class="column halfwidth">
+            <h2>Articles</h2>
+            <ul id="articles" class="styleless">
+            </ul>
+          </section>
+        </div>
       </article>
 
     </main>
@@ -64,6 +104,7 @@
           var info = Mustache.to_html(template, awardList[i]);
           console.log(awardList[i]);
           $('#awards').html(info);
+          $('#articles').html(info);
         }
 
         console.log('mustachified');
