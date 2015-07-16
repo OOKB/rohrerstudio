@@ -35,15 +35,42 @@
 
     <main class="clearfix">
 
-      <div>TK</div>
+      <article>
+        <ul id="awards">
+          <!-- stuff goes here? -->
+          <script id="award-template" type="text/x-mustache-template">
+            <li><p><span>{{year}}</span> - {{award}}, {{group}} / {{project}}</p></li>
+          </script>
+        </ul>
+      </article>
 
     </main>
 
-    <footer class="stuck">
+    <footer>
       <p>©2015 Rohrer Studio | Architecture • Interiors</p>
     </footer>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
+
+    <script>
+      $.getJSON('http://rohrerstudio.ezle.io/index.json', function(data) {
+
+        //mustache for images
+        var template = $('#award-template').html();
+        var awardList = data.db.awards;
+
+        for (var i=0; i < 1; i++) {
+          var info = Mustache.to_html(template, awardList[i]);
+          console.log(awardList[i]);
+          $('#awards').html(info);
+        }
+
+        console.log('mustachified');
+        // done with mustache templating
+      });
+    </script>
+
     <script src="hamburger-nav.js"></script>
 
   </body>

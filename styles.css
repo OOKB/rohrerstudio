@@ -71,8 +71,10 @@ p {
   margin: 0 -1em;
 }
 
-.halfwidth {
-  width: 50%;
+@media (min-width: 768px) {
+  .halfwidth {
+    width: 50%;
+  }
 }
 /******/
 
