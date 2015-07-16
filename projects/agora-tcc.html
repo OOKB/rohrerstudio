@@ -45,8 +45,8 @@
         </article>
 
         <ul class="projects-nav clearfix">
-          <li><button class="prev">Previous Project</button></li>
-          <li><button class="next">Next Project</button></li>
+          <li><a href="agora-16-west-madison.html"><button class="prev">Previous Project</button></a></li>
+          <li><a href="colombiere-stable.html"><button class="next">Next Project</button></a></li>
         </ul>
 
       </section>
@@ -65,7 +65,7 @@
     <script src="http://malsup.github.io/ios6fix.js"></script>
     <script src="../hamburger-nav.js"></script>
 
-    <script id="project-info" type="text/template">
+    <script id="project-info" type="text/x-mustache-template">
     {{#agora-tcc}}
 
       <div id="homess">
@@ -102,7 +102,7 @@
         <li>Area: {{area}} sq.ft</li>
         <li class="awards {{^awards}}hide{{/awards}}">
           <strong>Awards</strong>
-          <ul class="sub">
+          <ul class="sub styleless">
             {{#awards}}
             <li>{{year}}: {{award}} / {{group}}</li>
             {{/awards}}
@@ -110,7 +110,7 @@
         </li>
         <li class="article {{^article}}hide {{/article}}">
           <strong>Articles</strong>
-          <ul class="sub">
+          <ul class="sub styleless">
             {{#article}}
             <li><a href="{{url}}">{{date}}: {{publication}}</a></li>
             {{/article}}

@@ -61,6 +61,12 @@ p {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
+ul.styleless {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .column,
 .columns {
   float: left;
@@ -554,11 +560,6 @@ section.content p {
 
 #detail-view .detail-info ul.miscellany li:first-child {
   border-top: 1px solid rgba(205, 32, 39, 1);
-}
-
-#detail-view .detail-info ul.miscellany ul.sub {
-  margin: 0;
-  padding-left: 20px;
 }
 
 #detail-view .detail-info ul.miscellany ul.sub li {
